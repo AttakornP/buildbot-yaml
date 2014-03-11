@@ -1,29 +1,27 @@
-== How to Setup Buildbot by YAML Config ==
+# How to Setup Buildbot by YAML Config
 
- * Easy to setup basic Buildbot config.
+  * Easy to setup basic Buildbot config.
 
-== Requirement packages ==
- * buildbot
- * buildbot-slave
- * python-git
- * python-yaml
+### Requirement packages 
+  * buildbot
+  * buildbot-slave
+  * python-git
+  * python-yaml
 
-== Limitation ==
- * Can not clone project to other name.
- * This version support only shell command.
- * This version not support Git with out upstream.
+### Limitation
+  * Can not clone project to other name.
+  * This version support only shell command.
+  * This version not support Git with out upstream.
 
-== How to use ==
+### How to use 
 1. Create `config.yml` in project's root folder.
 1. Clone code from this repository to server.
-1. run script
-{{{
-$ ./create-buildbot <project_repository> <branch>
-}}}
+1. run script  
+``` create-buildbot <project_repository> <branch> ```
 1. Verify by go to waterfall page and try to force build.
 
-== YAML config format ==
-{{{
+### YAML config format
+```
 git:
 -
   repository : git@<host>:<namespace>/<projectname>.git
@@ -55,5 +53,4 @@ factory:
   -
     command : <shell cmd>
     workdir : <dir for use cmd>
-}}}
-
+```
