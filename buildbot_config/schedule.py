@@ -10,7 +10,7 @@ SCHEDULERS = []
 
 for REPOSITORY_URL in GIT:
     PROJECT_NAME = REPOSITORY_URL["repository"].split("/")[1].split(".git")[0]
-    BRANCH = REPOSITORY_URL["branch"]
+    BRANCH = REPOSITORY_URL.get("branch", "develop")
     builder_names = RELATION[PROJECT_NAME]
     
     GITPOLLERS.append(GitPoller(
