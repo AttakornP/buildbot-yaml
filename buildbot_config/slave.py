@@ -21,7 +21,7 @@ for slave in BUIDER:
     for step in factory_steps: 
         factory.addStep(ShellCommand(
             command=step["command"], 
-            workdir=step["workdir"]
+            workdir=step.get("workdir", "src")
         ))
 
     BUILDERS.append(BuilderConfig(name=builder_name
