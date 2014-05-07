@@ -12,8 +12,9 @@ for config in config_file:
             config_all.setdefault(key)
             config_all[key] = config_data[key]
         if type(config_data[key]) == list:
-            if config_all[key] != config_data[key]:
-                config_all[key].extend(config_data[key])
+            for data in config_data[key]:
+                if not data in config_all[key]:
+                    config_all[key].extend(config_data[key])
         else:
             if config_all[key] != config_data[key]:
                 config_all[key].update(config_data[key])
