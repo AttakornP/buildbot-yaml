@@ -1,0 +1,4 @@
+GitPython==0.3.2.RC1
+buildbot
+buildbot-slave
+pyyaml
