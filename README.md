@@ -1,4 +1,4 @@
-![](https://github.com/AttakornP/buildbot-yaml/workflows/Python+application/badge.svg)
+![](https://github.com/AttakornP/buildbot-yaml/workflows/"Python+application"/badge.svg)
 
 # How to Setup Buildbot by YAML Config
 
